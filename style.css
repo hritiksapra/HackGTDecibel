@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffee93;
+    background-color: #9AD1D4;
+    margin-top: 5em;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto 27px', serif;
+}
+
+input[type=submit] {
+    background-color: #007EA7;
+    font-family: 'Roboto', sans-serif;
+    border: 0;
+    text-align: center;
+    margin: 5px 5px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    border-radius: 100%;
+    color: #fdfff7;
+    padding: 50px 40px;
+    size: 50px 50px;
+    -webkit-transition: width 1s, height 1s, background-color 2s;
+    transition: width 1s, height 1s, background-color 2s;
+    font-size: 12;
+}
+
+
+input[type=submit]:hover{
+    background-color: #003249;
+    width: 150px;
+    height: 150px;
+    padding: 50px 50px;
+    font-size: 16;
+    }

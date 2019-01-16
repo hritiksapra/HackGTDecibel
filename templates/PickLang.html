@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/vendor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/fonts.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/animate.css') }}">
+     <script type="text/javascript" src="{{ url_for('static', filename='./js/jquery-3.3.1.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='./js/mordernizr.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='./js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<style src="/static/styles/style.css"></style>
+<style src="/static/styles/base.css"></style>
+<style src="/static/styles/main.css"></style>
+<style src="/static/styles/vendor.css"></style>
+<style src="/static/styles/animate.css"></style>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    background-image: url('/static/styles/intro-bg.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+.headingOfPage {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 40vh;
+}
+.text {
+    text-align: center;
+    font-family: Open Sans;
+    font-weight: 800;
+    font-size: 5rem;
+    color: white;
+}
+
+.formy {
+    position: absolute;
+    display:  block;
+    margin-left: 8vw;
+    margin-top: 25vh;
+    width: 100%;
+    background-color: black;
+    padding: 50px;
+}
+.lol {
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    color: black;
+}
+.imged {
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+}
+</style>
+</head>
+<body>
+<div class="headingOfPage">
+    <img src="/static/styles/favicon.png" class="imged">
+    <p class="text">
+    This is Decibel
+</p>
+</div>
+
+    <form method=post action="/parseInput" class="animated fadeIn formy">
+        <input type="submit" name="submit_button" value="English" class="lol">
+    <input type="submit" name="submit_button" value="Spanish" class="lol">
+    <input type="submit" name="submit_button" value="French" class="lol">
+    <input type="submit" name="submit_button" value="Japanese" class="lol">
+    <input type="submit" name="submit_button" value="German" class="lol">
+    <input type="submit" name="submit_button" value="Portuguese" class="lol">
+    <input type="submit" name="submit_button" value="Korean" class="lol">
+        <input type="submit" name="submit_button" value="Italian" class="lol">
+    </form>
+
+<!--<form action="/signup" method="post">-->
+  <!--<input type="text" name="email"></input>-->
+  <!--<input type="submit" value="Signup"></input>-->
+<!--</form>-->
+</body>
+</html>

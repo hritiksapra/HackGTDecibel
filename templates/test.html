@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Result</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+    body {
+    background: black;
+}
+        #hideme {
+    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    margin-top: 45vh;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+#per
+{
+    color: white;
+    display:none;
+}
+    .text {
+    text-align: center;
+    font-family: Open Sans;
+    font-weight: 800;
+    font-size: 3rem;
+    color: white;
+
+}
+    </style>
+</head>
+<body>
+<img src="/static/styles/loader.gif" style="display: block; margin-right: auto; margin-left: auto;" id="hideme" class="img">
+<h4 id="per" class="text">Percentage Similarity: {{ '{:.2f}'.format(varsToSend[0]) }}%</h4>
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    setTimeout(function(){
+   $('#per').show();// or fade, css display however you'd like.
+}, 5200);
+</script>
+</body>
+
+</html>

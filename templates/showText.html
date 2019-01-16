@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Result</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        body {
+            background-image: url('/static/styles/intro-bg.jpg') !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+        #textToSpeak {
+            color: black;
+            text-align: center;
+            font-size: 2rem;
+            line-height: 10px;
+            font-weight: 400;
+            font-family: Open Sans;
+            padding-top: 100px;
+
+        }
+        .hello {
+    background: url(https://d2l5v8ibvnnoh9.cloudfront.net/assets/screenflick/video_play_button-369217c9bde2d338afee1a1491788729770405a86552f47a1fcba3c845634d94.png);
+    border: 0;
+    display: block;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+}
+.background {
+    height: 25vh;
+    margin-top: 15vh;
+    border-radius: 10px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+.bye {
+        display: inline-block;
+    font-family: "poppins-bold", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    height: 5.4rem;
+    line-height: 5.4rem;
+    padding: 0 3rem;
+    margin: 0 .3rem 1.2rem 0;
+    background: #d8d8d8;
+    color: #313131;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+     </style>
+</head>
+<body>
+
+<div class="background">
+    <p id="textToSpeak">Press the play button!</p>
+</div>
+
+
+<form action="/playFile" style="margin-top: 5vh;">
+    <input type="submit" value="" class="hello">
+</form>
+
+<form action="/uploadFile" style="margin-top: 10vh;">
+    <input type="submit" value="Continue to Upload your Audio" class="bye">
+</form>
+</body>
+
+<script>
+    var text = "{{ varsToSend[-1] }}";
+    console.log(text);
+    var duration = {{ varsToSend[2] }};
+    var pTag = document.getElementById("textToSpeak");
+    var index = 0;
+    pTag.innerHTML = "";
+    var timeInterval = setInterval(function() {
+        if (index > text.length) {
+            window.clearInterval(timeInterval);
+        }
+        pTag.innerHTML += text.charAt(index)
+        index += 1;
+
+    }, duration)
+    console.log("Here");
+</script>
+</html>

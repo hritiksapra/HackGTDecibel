@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload new File</title>
+</head>
+<body>
+<!doctype html>
+<html>
+
+       <head>
+       <title>Upload new File</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='./styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/vendor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/fonts.css') }}">
+           <script type="text/javascript" src="{{ url_for('static', filename='./js/jquery-3.3.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='./js/mordernizr.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='./js/main.js') }}"></script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        body {
+            background-image: url('/static/styles/intro-bg.jpg') !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+        .text {
+    text-align: center;
+    font-family: Open Sans;
+    font-weight: 800;
+    font-size: 5rem;
+    color: white;
+    padding: 20px;
+}
+.bye {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hi {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+      </style>
+       </head>
+       <body>
+       <h1 class="text">Upload new File</h1>
+       <div style="margin-top: 20vh; margin-right: auto; margin-left: auto;">
+          <form method=post enctype=multipart/form-data action="/uploadFile">
+         <input type=file name=file class="bye">
+         <input type=submit value=Upload class="hi">
+       </form>
+       <form method=post enctype=multipart/form-data action="/test">
+      <input type=submit value=Analyze class="hi">
+       </form>
+       </div>
+
+</body>
+</html>
