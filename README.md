@@ -24,7 +24,7 @@ Navigate to the directory you wish to save the project to:
 
 While staying in the directory:
 
-<code> git clone https://gitlab.com/samyakkumar/hackgtdecibel.git </code>
+<code> git clone https://github.com/hritiksapra/HackGTDecibel.git </code>
 
 <code> cd myproject </code>
 
